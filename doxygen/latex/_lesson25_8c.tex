@@ -1,0 +1,483 @@
+\hypertarget{_lesson25_8c}{}\section{Référence du fichier C\+:/src/\+Open\+G\+L/\+Lesson25/\+Lesson25.c}
+\label{_lesson25_8c}\index{C\+:/src/\+Open\+G\+L/\+Lesson25/\+Lesson25.\+c@{C\+:/src/\+Open\+G\+L/\+Lesson25/\+Lesson25.\+c}}
+
+
+Ouvre une fen�tre Windows et dessine une sph�re en mode points que l\textquotesingle{}on peut faire tourner avec les fl�ches de d�placement clavier.  
+
+
+{\ttfamily \#include $<$windows.\+h$>$}\\*
+{\ttfamily \#include $<$math.\+h$>$}\\*
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$gl\textbackslash{}gl.\+h$>$}\\*
+{\ttfamily \#include $<$gl\textbackslash{}glu.\+h$>$}\\*
+\subsection*{Structures de données}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_v_e_r_t_e_x}{V\+E\+R\+T\+E\+X}
+\item 
+struct \hyperlink{struct_o_b_j_e_c_t}{O\+B\+J\+E\+C\+T}
+\end{DoxyCompactItemize}
+\subsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+L\+R\+E\+S\+U\+L\+T C\+A\+L\+L\+B\+A\+C\+K \hyperlink{_lesson25_8c_a9135ea2a0d6fce68ba3b858226a31a4f}{Wnd\+Proc} (H\+W\+N\+D, U\+I\+N\+T, W\+P\+A\+R\+A\+M, L\+P\+A\+R\+A\+M)
+\item 
+void \hyperlink{_lesson25_8c_a5bcd0bf8c9a421707b5776580fc9ff33}{objallocate} (\hyperlink{struct_o_b_j_e_c_t}{O\+B\+J\+E\+C\+T} $\ast$k, int n)
+\item 
+void \hyperlink{_lesson25_8c_aa3cf3ef7d00d8d6e11e659b87145f157}{objfree} (\hyperlink{struct_o_b_j_e_c_t}{O\+B\+J\+E\+C\+T} $\ast$k)
+\item 
+void \hyperlink{_lesson25_8c_a48c340edb19bf32b9e9f127178ade2d6}{readstr} (F\+I\+L\+E $\ast$f, char $\ast$string)
+\item 
+void \hyperlink{_lesson25_8c_a1386f14da843b81c65b74c176e632e93}{objload} (char $\ast$name, \hyperlink{struct_o_b_j_e_c_t}{O\+B\+J\+E\+C\+T} $\ast$k)
+\item 
+\hyperlink{struct_v_e_r_t_e_x}{V\+E\+R\+T\+E\+X} \hyperlink{_lesson25_8c_a8d7462811e0b5be200ed1c7db2ccf9e5}{calculate} (int i)
+\item 
+G\+Lvoid \hyperlink{_lesson25_8c_a87bb84d489df61ed7b0c002584fd984f}{Re\+Size\+G\+L\+Scene} (G\+Lsizei width, G\+Lsizei height)
+\item 
+int \hyperlink{_lesson25_8c_aa4c387d3f1ebce6d57684b6a10c9b0ae}{Init\+G\+L} (G\+Lvoid)
+\item 
+void \hyperlink{_lesson25_8c_afd0d536ac4234002d2cb9ca4c4b7f0be}{Draw\+G\+L\+Scene} (G\+Lvoid)
+\item 
+G\+Lvoid \hyperlink{_lesson25_8c_af33a2273205c1491be5916d3091658e0}{Kill\+G\+L\+Window} (G\+Lvoid)
+\item 
+B\+O\+O\+L \hyperlink{_lesson25_8c_ae5f043c9df9b9e5e0e26d567feeeb1bc}{Create\+G\+L\+Window} (char $\ast$title, int width, int height, int bits, B\+O\+O\+L fullscreenflag)
+\item 
+int W\+I\+N\+A\+P\+I \hyperlink{_lesson25_8c_a661c2abc03926acfaeb93b4ae7db4943}{Win\+Main} (H\+I\+N\+S\+T\+A\+N\+C\+E \hyperlink{_lesson25_8c_a74029128723095e7bf00a71d46af8b24}{h\+Instance}, H\+I\+N\+S\+T\+A\+N\+C\+E h\+Prev\+Instance, L\+P\+S\+T\+R lp\+Cmd\+Line, int n\+Cmd\+Show)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+H\+D\+C \hyperlink{_lesson25_8c_a78f6446a0e13adc7b7b2f239112ac785}{h\+D\+C} =N\+U\+L\+L
+\item 
+H\+G\+L\+R\+C \hyperlink{_lesson25_8c_a874963259c7cd998acfe6e187fbdb4c1}{h\+R\+C} =N\+U\+L\+L
+\item 
+H\+W\+N\+D \hyperlink{_lesson25_8c_afec4341c234519e145bac6f0e5edaa51}{h\+Wnd} =N\+U\+L\+L
+\item 
+H\+I\+N\+S\+T\+A\+N\+C\+E \hyperlink{_lesson25_8c_a74029128723095e7bf00a71d46af8b24}{h\+Instance}
+\item 
+B\+O\+O\+L \hyperlink{_lesson25_8c_a55a8351b704275ad12988864918abb2a}{keys} \mbox{[}256\mbox{]}
+\item 
+B\+O\+O\+L \hyperlink{_lesson25_8c_a22389371583c4b8843e06da43399d6d9}{active} =T\+R\+U\+E
+\item 
+B\+O\+O\+L \hyperlink{_lesson25_8c_ab15a33c0173f2c5b6ac806c55cf7f0ba}{fullscreen} =T\+R\+U\+E
+\item 
+G\+Lfloat \hyperlink{_lesson25_8c_a599f50b1636901ceee9b660ef480a49c}{xrot}
+\item 
+G\+Lfloat \hyperlink{_lesson25_8c_a9549138cf4d209303566523d805d8525}{yrot}
+\item 
+G\+Lfloat \hyperlink{_lesson25_8c_a0441705f3a5277b1381159b4a22807c4}{zrot}
+\item 
+G\+Lfloat \hyperlink{_lesson25_8c_a0b2f48da4eeb0f800c9e125995e81aed}{xspeed}
+\item 
+G\+Lfloat \hyperlink{_lesson25_8c_a924f9c7295b7addcb7606fd6e4737d10}{yspeed}
+\item 
+G\+Lfloat \hyperlink{_lesson25_8c_a7f0ef9b41aa8d307eca20b32ceb0a44a}{zspeed}
+\item 
+G\+Lfloat \hyperlink{_lesson25_8c_adc3d5b984f09fca1cbcac3a225c675e6}{cx}
+\item 
+G\+Lfloat \hyperlink{_lesson25_8c_a65daf1b9b41e1c9ef990bc6489f2700c}{cy}
+\item 
+G\+Lfloat \hyperlink{_lesson25_8c_adeecafc84badcf5ab77676e4bb549296}{cz} =-\/15
+\item 
+int \hyperlink{_lesson25_8c_a35af0be900467fedbb610bd6ea65ed78}{key} =1
+\item 
+int \hyperlink{_lesson25_8c_abc16e65f240ed0c8f3e876e8732c0a33}{step} =0
+\item 
+int \hyperlink{_lesson25_8c_ab4ae7205573977222eadd0795db193e2}{steps} =200
+\item 
+B\+O\+O\+L \hyperlink{_lesson25_8c_a783f1b047283439d9b3a91bd5476dbeb}{morph} =F\+A\+L\+S\+E
+\item 
+int \hyperlink{_lesson25_8c_a2003332bd352794d46ab71e30bd4c29b}{maxver}
+\item 
+\hyperlink{struct_o_b_j_e_c_t}{O\+B\+J\+E\+C\+T} \hyperlink{_lesson25_8c_a8d464c1db40a62ae9405cab45f8c6e4e}{morph1}
+\item 
+\hyperlink{struct_o_b_j_e_c_t}{O\+B\+J\+E\+C\+T} \hyperlink{_lesson25_8c_acd7acfd984dfd4cd7f97b8a2c7c8fce1}{morph2}
+\item 
+\hyperlink{struct_o_b_j_e_c_t}{O\+B\+J\+E\+C\+T} \hyperlink{_lesson25_8c_a92f0763b0d180d36087f49a5b166b6e1}{morph3}
+\item 
+\hyperlink{struct_o_b_j_e_c_t}{O\+B\+J\+E\+C\+T} \hyperlink{_lesson25_8c_afbb9dd7eb1bb58bbcd55b4f6ba0ba0c7}{morph4}
+\item 
+\hyperlink{struct_o_b_j_e_c_t}{O\+B\+J\+E\+C\+T} \hyperlink{_lesson25_8c_ab6609e13574e7f2857733d9b44fc5131}{helper}
+\item 
+\hyperlink{struct_o_b_j_e_c_t}{O\+B\+J\+E\+C\+T} $\ast$ \hyperlink{_lesson25_8c_aa9f7a2485f5a17e3c6a83f506dad5523}{sour}
+\item 
+\hyperlink{struct_o_b_j_e_c_t}{O\+B\+J\+E\+C\+T} $\ast$ \hyperlink{_lesson25_8c_a367540b9046af35b3c3f66c4a417c2ed}{dest}
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+Ouvre une fen�tre Windows et dessine une sph�re en mode points que l\textquotesingle{}on peut faire tourner avec les fl�ches de d�placement clavier. 
+
+Comments manageable by Doxygen
+
+Modified smoothly by Thierry D\+E\+C\+H\+A\+I\+Z\+E
+
+Paradigm \+: obtain one source (only one !) compatible for multiple free C Compilers and provide for all users an development environment on Windows (64 bits compatible), the great Code\+::\+Blocks manager (version 13.\+12), and don\textquotesingle{}t use glaux.\+lib or glaux.\+dll.
+
+a) Mingw 32 and 64 bits \+: downloadable \href{http://sourceforge.net/projects/mingw/}{\tt http\+://sourceforge.\+net/projects/mingw/} b) Mingw 32 D\+E\+V-\/\+C\+P\+P \+: included in old Dev-\/\+Cpp \href{http://sourceforge.net/projects/devcpp/}{\tt http\+://sourceforge.\+net/projects/devcpp/} c) Mingw 32 C\+B \+: included in package Code\+::\+Blocks (version 13.\+12) \href{http://sourceforge.net/projects/codeblocks/files/Binaries/12.11/Windows/}{\tt http\+://sourceforge.\+net/projects/codeblocks/files/\+Binaries/12.\+11/\+Windows/} d) Borland C \+: downloadable \href{http://edn.embarcadero.com/article/20633}{\tt http\+://edn.\+embarcadero.\+com/article/20633} e) Digital Mars Compiler C \+: version 8.\+57 downloadable \href{http://www.digitalmars.com}{\tt http\+://www.\+digitalmars.\+com} f) Open\+Watcom \+: version 1.\+9 downloadable \href{http://openwatcom.mirror.fr/}{\tt http\+://openwatcom.\+mirror.\+fr/} Version 2.\+0 64bits seems very buggy !!! g) Lcc and Lcc64 \+: downloadable \href{http://www.cs.virginia.edu/~lcc-win32/}{\tt http\+://www.\+cs.\+virginia.\+edu/$\sim$lcc-\/win32/} h) Cygwin \+: downloadable \href{http://www.cygwin.com/install.html}{\tt http\+://www.\+cygwin.\+com/install.\+html} (setup.\+exe) i) Visual Studio 2005 + 64bits\+: express edition for free (my version 2005 is full not express) \href{http://www.microsoft.com/france/visual-studio/essayez/express.aspx}{\tt http\+://www.\+microsoft.\+com/france/visual-\/studio/essayez/express.\+aspx} j) T\+D\+M G\+C\+C 64 bits \+: downloadable on \href{http://sourceforge.net/projects/TDM-GCC}{\tt http\+://sourceforge.\+net/projects/\+T\+D\+M-\/\+G\+C\+C}
+
+Important remark \+: All install in C partition, \char`\"{}no space\char`\"{} and \char`\"{}no special characters\char`\"{} in the name of directories (it\textquotesingle{}s reason to not install in C\+: Files (x86) ... by default proposed on windows 64 bits)
+
+Add resource file end resource header for restitute version + icon Open\+G\+L.\+ico for fun because versionning is important, same for freeware \+:-\/) !
+
+Date \+: 2016/01/02
+
+\begin{DoxyAuthor}{Auteur}
+Piotr Cieslak \& Jeff Molofee (Ne\+He) originely, Modified for L\+C\+C\+Win32 compiler by Robert Wishlaw 2002/11/24 
+
+After adapted by Thierry Dechaize to verify paradigm \+: one source for multiple C Compilers 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0.\+1.\+2 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+3 janvier 2016
+\end{DoxyDate}
+Ce programme ne g�re que trois �v�nements \+: le clic sur le bouton \char`\"{}\+Ferm�\char`\"{} de la fen�tre, la sortie par la touche E\+S\+C et les fl�ches de d�placement clavier. 
+
+\subsection{Documentation des fonctions}
+\hypertarget{_lesson25_8c_a8d7462811e0b5be200ed1c7db2ccf9e5}{}\index{Lesson25.\+c@{Lesson25.\+c}!calculate@{calculate}}
+\index{calculate@{calculate}!Lesson25.\+c@{Lesson25.\+c}}
+\subsubsection[{calculate(int i)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf V\+E\+R\+T\+E\+X} calculate (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)}\label{_lesson25_8c_a8d7462811e0b5be200ed1c7db2ccf9e5}
+
+
+Définition à la ligne 178 du fichier Lesson25.\+c.
+
+\hypertarget{_lesson25_8c_ae5f043c9df9b9e5e0e26d567feeeb1bc}{}\index{Lesson25.\+c@{Lesson25.\+c}!Create\+G\+L\+Window@{Create\+G\+L\+Window}}
+\index{Create\+G\+L\+Window@{Create\+G\+L\+Window}!Lesson25.\+c@{Lesson25.\+c}}
+\subsubsection[{Create\+G\+L\+Window(char $\ast$title, int width, int height, int bits, B\+O\+O\+L fullscreenflag)}]{\setlength{\rightskip}{0pt plus 5cm}B\+O\+O\+L Create\+G\+L\+Window (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{title, }
+\item[{int}]{width, }
+\item[{int}]{height, }
+\item[{int}]{bits, }
+\item[{B\+O\+O\+L}]{fullscreenflag}
+\end{DoxyParamCaption}
+)}\label{_lesson25_8c_ae5f043c9df9b9e5e0e26d567feeeb1bc}
+This Code Creates Our Open\+G\+L Window. Parameters Are\+: $\ast$ title -\/ Title To Appear At The Top Of The Window $\ast$ width -\/ Width Of The G\+L Window Or Fullscreen Mode $\ast$ height -\/ Height Of The G\+L Window Or Fullscreen Mode $\ast$ bits -\/ Number Of Bits To Use For Color (8/16/24/32) $\ast$ fullscreenflag -\/ Use Fullscreen Mode (T\+R\+U\+E) Or Windowed Mode (F\+A\+L\+S\+E) 
+
+Définition à la ligne 333 du fichier Lesson25.\+c.
+
+\hypertarget{_lesson25_8c_afd0d536ac4234002d2cb9ca4c4b7f0be}{}\index{Lesson25.\+c@{Lesson25.\+c}!Draw\+G\+L\+Scene@{Draw\+G\+L\+Scene}}
+\index{Draw\+G\+L\+Scene@{Draw\+G\+L\+Scene}!Lesson25.\+c@{Lesson25.\+c}}
+\subsubsection[{Draw\+G\+L\+Scene(\+G\+Lvoid)}]{\setlength{\rightskip}{0pt plus 5cm}void Draw\+G\+L\+Scene (
+\begin{DoxyParamCaption}
+\item[{G\+Lvoid}]{}
+\end{DoxyParamCaption}
+)}\label{_lesson25_8c_afd0d536ac4234002d2cb9ca4c4b7f0be}
+
+
+Définition à la ligne 237 du fichier Lesson25.\+c.
+
+\hypertarget{_lesson25_8c_aa4c387d3f1ebce6d57684b6a10c9b0ae}{}\index{Lesson25.\+c@{Lesson25.\+c}!Init\+G\+L@{Init\+G\+L}}
+\index{Init\+G\+L@{Init\+G\+L}!Lesson25.\+c@{Lesson25.\+c}}
+\subsubsection[{Init\+G\+L(\+G\+Lvoid)}]{\setlength{\rightskip}{0pt plus 5cm}int Init\+G\+L (
+\begin{DoxyParamCaption}
+\item[{G\+Lvoid}]{}
+\end{DoxyParamCaption}
+)}\label{_lesson25_8c_aa4c387d3f1ebce6d57684b6a10c9b0ae}
+
+
+Définition à la ligne 206 du fichier Lesson25.\+c.
+
+\hypertarget{_lesson25_8c_af33a2273205c1491be5916d3091658e0}{}\index{Lesson25.\+c@{Lesson25.\+c}!Kill\+G\+L\+Window@{Kill\+G\+L\+Window}}
+\index{Kill\+G\+L\+Window@{Kill\+G\+L\+Window}!Lesson25.\+c@{Lesson25.\+c}}
+\subsubsection[{Kill\+G\+L\+Window(\+G\+Lvoid)}]{\setlength{\rightskip}{0pt plus 5cm}G\+Lvoid Kill\+G\+L\+Window (
+\begin{DoxyParamCaption}
+\item[{G\+Lvoid}]{}
+\end{DoxyParamCaption}
+)}\label{_lesson25_8c_af33a2273205c1491be5916d3091658e0}
+
+
+Définition à la ligne 279 du fichier Lesson25.\+c.
+
+\hypertarget{_lesson25_8c_a5bcd0bf8c9a421707b5776580fc9ff33}{}\index{Lesson25.\+c@{Lesson25.\+c}!objallocate@{objallocate}}
+\index{objallocate@{objallocate}!Lesson25.\+c@{Lesson25.\+c}}
+\subsubsection[{objallocate(\+O\+B\+J\+E\+C\+T $\ast$k, int n)}]{\setlength{\rightskip}{0pt plus 5cm}void objallocate (
+\begin{DoxyParamCaption}
+\item[{{\bf O\+B\+J\+E\+C\+T} $\ast$}]{k, }
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)}\label{_lesson25_8c_a5bcd0bf8c9a421707b5776580fc9ff33}
+
+
+Définition à la ligne 131 du fichier Lesson25.\+c.
+
+\hypertarget{_lesson25_8c_aa3cf3ef7d00d8d6e11e659b87145f157}{}\index{Lesson25.\+c@{Lesson25.\+c}!objfree@{objfree}}
+\index{objfree@{objfree}!Lesson25.\+c@{Lesson25.\+c}}
+\subsubsection[{objfree(\+O\+B\+J\+E\+C\+T $\ast$k)}]{\setlength{\rightskip}{0pt plus 5cm}void objfree (
+\begin{DoxyParamCaption}
+\item[{{\bf O\+B\+J\+E\+C\+T} $\ast$}]{k}
+\end{DoxyParamCaption}
+)}\label{_lesson25_8c_aa3cf3ef7d00d8d6e11e659b87145f157}
+
+
+Définition à la ligne 136 du fichier Lesson25.\+c.
+
+\hypertarget{_lesson25_8c_a1386f14da843b81c65b74c176e632e93}{}\index{Lesson25.\+c@{Lesson25.\+c}!objload@{objload}}
+\index{objload@{objload}!Lesson25.\+c@{Lesson25.\+c}}
+\subsubsection[{objload(char $\ast$name, O\+B\+J\+E\+C\+T $\ast$k)}]{\setlength{\rightskip}{0pt plus 5cm}void objload (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{name, }
+\item[{{\bf O\+B\+J\+E\+C\+T} $\ast$}]{k}
+\end{DoxyParamCaption}
+)}\label{_lesson25_8c_a1386f14da843b81c65b74c176e632e93}
+
+
+Définition à la ligne 150 du fichier Lesson25.\+c.
+
+\hypertarget{_lesson25_8c_a48c340edb19bf32b9e9f127178ade2d6}{}\index{Lesson25.\+c@{Lesson25.\+c}!readstr@{readstr}}
+\index{readstr@{readstr}!Lesson25.\+c@{Lesson25.\+c}}
+\subsubsection[{readstr(\+F\+I\+L\+E $\ast$f, char $\ast$string)}]{\setlength{\rightskip}{0pt plus 5cm}void readstr (
+\begin{DoxyParamCaption}
+\item[{F\+I\+L\+E $\ast$}]{f, }
+\item[{char $\ast$}]{string}
+\end{DoxyParamCaption}
+)}\label{_lesson25_8c_a48c340edb19bf32b9e9f127178ade2d6}
+
+
+Définition à la ligne 141 du fichier Lesson25.\+c.
+
+\hypertarget{_lesson25_8c_a87bb84d489df61ed7b0c002584fd984f}{}\index{Lesson25.\+c@{Lesson25.\+c}!Re\+Size\+G\+L\+Scene@{Re\+Size\+G\+L\+Scene}}
+\index{Re\+Size\+G\+L\+Scene@{Re\+Size\+G\+L\+Scene}!Lesson25.\+c@{Lesson25.\+c}}
+\subsubsection[{Re\+Size\+G\+L\+Scene(\+G\+Lsizei width, G\+Lsizei height)}]{\setlength{\rightskip}{0pt plus 5cm}G\+Lvoid Re\+Size\+G\+L\+Scene (
+\begin{DoxyParamCaption}
+\item[{G\+Lsizei}]{width, }
+\item[{G\+Lsizei}]{height}
+\end{DoxyParamCaption}
+)}\label{_lesson25_8c_a87bb84d489df61ed7b0c002584fd984f}
+
+
+Définition à la ligne 187 du fichier Lesson25.\+c.
+
+\hypertarget{_lesson25_8c_a661c2abc03926acfaeb93b4ae7db4943}{}\index{Lesson25.\+c@{Lesson25.\+c}!Win\+Main@{Win\+Main}}
+\index{Win\+Main@{Win\+Main}!Lesson25.\+c@{Lesson25.\+c}}
+\subsubsection[{Win\+Main(\+H\+I\+N\+S\+T\+A\+N\+C\+E h\+Instance, H\+I\+N\+S\+T\+A\+N\+C\+E h\+Prev\+Instance, L\+P\+S\+T\+R lp\+Cmd\+Line, int n\+Cmd\+Show)}]{\setlength{\rightskip}{0pt plus 5cm}int W\+I\+N\+A\+P\+I Win\+Main (
+\begin{DoxyParamCaption}
+\item[{H\+I\+N\+S\+T\+A\+N\+C\+E}]{h\+Instance, }
+\item[{H\+I\+N\+S\+T\+A\+N\+C\+E}]{h\+Prev\+Instance, }
+\item[{L\+P\+S\+T\+R}]{lp\+Cmd\+Line, }
+\item[{int}]{n\+Cmd\+Show}
+\end{DoxyParamCaption}
+)}\label{_lesson25_8c_a661c2abc03926acfaeb93b4ae7db4943}
+
+
+Définition à la ligne 539 du fichier Lesson25.\+c.
+
+\hypertarget{_lesson25_8c_a9135ea2a0d6fce68ba3b858226a31a4f}{}\index{Lesson25.\+c@{Lesson25.\+c}!Wnd\+Proc@{Wnd\+Proc}}
+\index{Wnd\+Proc@{Wnd\+Proc}!Lesson25.\+c@{Lesson25.\+c}}
+\subsubsection[{Wnd\+Proc(\+H\+W\+N\+D, U\+I\+N\+T, W\+P\+A\+R\+A\+M, L\+P\+A\+R\+A\+M)}]{\setlength{\rightskip}{0pt plus 5cm}L\+R\+E\+S\+U\+L\+T C\+A\+L\+L\+B\+A\+C\+K Wnd\+Proc (
+\begin{DoxyParamCaption}
+\item[{H\+W\+N\+D}]{h\+Wnd, }
+\item[{U\+I\+N\+T}]{u\+Msg, }
+\item[{W\+P\+A\+R\+A\+M}]{w\+Param, }
+\item[{L\+P\+A\+R\+A\+M}]{l\+Param}
+\end{DoxyParamCaption}
+)}\label{_lesson25_8c_a9135ea2a0d6fce68ba3b858226a31a4f}
+
+
+Définition à la ligne 478 du fichier Lesson25.\+c.
+
+
+
+\subsection{Documentation des variables}
+\hypertarget{_lesson25_8c_a22389371583c4b8843e06da43399d6d9}{}\index{Lesson25.\+c@{Lesson25.\+c}!active@{active}}
+\index{active@{active}!Lesson25.\+c@{Lesson25.\+c}}
+\subsubsection[{active}]{\setlength{\rightskip}{0pt plus 5cm}B\+O\+O\+L active =T\+R\+U\+E}\label{_lesson25_8c_a22389371583c4b8843e06da43399d6d9}
+
+
+Définition à la ligne 81 du fichier Lesson25.\+c.
+
+\hypertarget{_lesson25_8c_adc3d5b984f09fca1cbcac3a225c675e6}{}\index{Lesson25.\+c@{Lesson25.\+c}!cx@{cx}}
+\index{cx@{cx}!Lesson25.\+c@{Lesson25.\+c}}
+\subsubsection[{cx}]{\setlength{\rightskip}{0pt plus 5cm}G\+Lfloat cx}\label{_lesson25_8c_adc3d5b984f09fca1cbcac3a225c675e6}
+
+
+Définition à la ligne 84 du fichier Lesson25.\+c.
+
+\hypertarget{_lesson25_8c_a65daf1b9b41e1c9ef990bc6489f2700c}{}\index{Lesson25.\+c@{Lesson25.\+c}!cy@{cy}}
+\index{cy@{cy}!Lesson25.\+c@{Lesson25.\+c}}
+\subsubsection[{cy}]{\setlength{\rightskip}{0pt plus 5cm}G\+Lfloat cy}\label{_lesson25_8c_a65daf1b9b41e1c9ef990bc6489f2700c}
+
+
+Définition à la ligne 84 du fichier Lesson25.\+c.
+
+\hypertarget{_lesson25_8c_adeecafc84badcf5ab77676e4bb549296}{}\index{Lesson25.\+c@{Lesson25.\+c}!cz@{cz}}
+\index{cz@{cz}!Lesson25.\+c@{Lesson25.\+c}}
+\subsubsection[{cz}]{\setlength{\rightskip}{0pt plus 5cm}G\+Lfloat cz =-\/15}\label{_lesson25_8c_adeecafc84badcf5ab77676e4bb549296}
+
+
+Définition à la ligne 86 du fichier Lesson25.\+c.
+
+\hypertarget{_lesson25_8c_a367540b9046af35b3c3f66c4a417c2ed}{}\index{Lesson25.\+c@{Lesson25.\+c}!dest@{dest}}
+\index{dest@{dest}!Lesson25.\+c@{Lesson25.\+c}}
+\subsubsection[{dest}]{\setlength{\rightskip}{0pt plus 5cm}{\bf O\+B\+J\+E\+C\+T} $\ast$ dest}\label{_lesson25_8c_a367540b9046af35b3c3f66c4a417c2ed}
+
+
+Définition à la ligne 104 du fichier Lesson25.\+c.
+
+\hypertarget{_lesson25_8c_ab15a33c0173f2c5b6ac806c55cf7f0ba}{}\index{Lesson25.\+c@{Lesson25.\+c}!fullscreen@{fullscreen}}
+\index{fullscreen@{fullscreen}!Lesson25.\+c@{Lesson25.\+c}}
+\subsubsection[{fullscreen}]{\setlength{\rightskip}{0pt plus 5cm}B\+O\+O\+L fullscreen =T\+R\+U\+E}\label{_lesson25_8c_ab15a33c0173f2c5b6ac806c55cf7f0ba}
+
+
+Définition à la ligne 82 du fichier Lesson25.\+c.
+
+\hypertarget{_lesson25_8c_a78f6446a0e13adc7b7b2f239112ac785}{}\index{Lesson25.\+c@{Lesson25.\+c}!h\+D\+C@{h\+D\+C}}
+\index{h\+D\+C@{h\+D\+C}!Lesson25.\+c@{Lesson25.\+c}}
+\subsubsection[{h\+D\+C}]{\setlength{\rightskip}{0pt plus 5cm}H\+D\+C h\+D\+C =N\+U\+L\+L}\label{_lesson25_8c_a78f6446a0e13adc7b7b2f239112ac785}
+
+
+Définition à la ligne 75 du fichier Lesson25.\+c.
+
+\hypertarget{_lesson25_8c_ab6609e13574e7f2857733d9b44fc5131}{}\index{Lesson25.\+c@{Lesson25.\+c}!helper@{helper}}
+\index{helper@{helper}!Lesson25.\+c@{Lesson25.\+c}}
+\subsubsection[{helper}]{\setlength{\rightskip}{0pt plus 5cm}{\bf O\+B\+J\+E\+C\+T} helper}\label{_lesson25_8c_ab6609e13574e7f2857733d9b44fc5131}
+
+
+Définition à la ligne 104 du fichier Lesson25.\+c.
+
+\hypertarget{_lesson25_8c_a74029128723095e7bf00a71d46af8b24}{}\index{Lesson25.\+c@{Lesson25.\+c}!h\+Instance@{h\+Instance}}
+\index{h\+Instance@{h\+Instance}!Lesson25.\+c@{Lesson25.\+c}}
+\subsubsection[{h\+Instance}]{\setlength{\rightskip}{0pt plus 5cm}H\+I\+N\+S\+T\+A\+N\+C\+E h\+Instance}\label{_lesson25_8c_a74029128723095e7bf00a71d46af8b24}
+
+
+Définition à la ligne 78 du fichier Lesson25.\+c.
+
+\hypertarget{_lesson25_8c_a874963259c7cd998acfe6e187fbdb4c1}{}\index{Lesson25.\+c@{Lesson25.\+c}!h\+R\+C@{h\+R\+C}}
+\index{h\+R\+C@{h\+R\+C}!Lesson25.\+c@{Lesson25.\+c}}
+\subsubsection[{h\+R\+C}]{\setlength{\rightskip}{0pt plus 5cm}H\+G\+L\+R\+C h\+R\+C =N\+U\+L\+L}\label{_lesson25_8c_a874963259c7cd998acfe6e187fbdb4c1}
+
+
+Définition à la ligne 76 du fichier Lesson25.\+c.
+
+\hypertarget{_lesson25_8c_afec4341c234519e145bac6f0e5edaa51}{}\index{Lesson25.\+c@{Lesson25.\+c}!h\+Wnd@{h\+Wnd}}
+\index{h\+Wnd@{h\+Wnd}!Lesson25.\+c@{Lesson25.\+c}}
+\subsubsection[{h\+Wnd}]{\setlength{\rightskip}{0pt plus 5cm}H\+W\+N\+D h\+Wnd =N\+U\+L\+L}\label{_lesson25_8c_afec4341c234519e145bac6f0e5edaa51}
+
+
+Définition à la ligne 77 du fichier Lesson25.\+c.
+
+\hypertarget{_lesson25_8c_a35af0be900467fedbb610bd6ea65ed78}{}\index{Lesson25.\+c@{Lesson25.\+c}!key@{key}}
+\index{key@{key}!Lesson25.\+c@{Lesson25.\+c}}
+\subsubsection[{key}]{\setlength{\rightskip}{0pt plus 5cm}int key =1}\label{_lesson25_8c_a35af0be900467fedbb610bd6ea65ed78}
+
+
+Définition à la ligne 88 du fichier Lesson25.\+c.
+
+\hypertarget{_lesson25_8c_a55a8351b704275ad12988864918abb2a}{}\index{Lesson25.\+c@{Lesson25.\+c}!keys@{keys}}
+\index{keys@{keys}!Lesson25.\+c@{Lesson25.\+c}}
+\subsubsection[{keys}]{\setlength{\rightskip}{0pt plus 5cm}B\+O\+O\+L keys\mbox{[}256\mbox{]}}\label{_lesson25_8c_a55a8351b704275ad12988864918abb2a}
+
+
+Définition à la ligne 80 du fichier Lesson25.\+c.
+
+\hypertarget{_lesson25_8c_a2003332bd352794d46ab71e30bd4c29b}{}\index{Lesson25.\+c@{Lesson25.\+c}!maxver@{maxver}}
+\index{maxver@{maxver}!Lesson25.\+c@{Lesson25.\+c}}
+\subsubsection[{maxver}]{\setlength{\rightskip}{0pt plus 5cm}int maxver}\label{_lesson25_8c_a2003332bd352794d46ab71e30bd4c29b}
+
+
+Définition à la ligne 103 du fichier Lesson25.\+c.
+
+\hypertarget{_lesson25_8c_a783f1b047283439d9b3a91bd5476dbeb}{}\index{Lesson25.\+c@{Lesson25.\+c}!morph@{morph}}
+\index{morph@{morph}!Lesson25.\+c@{Lesson25.\+c}}
+\subsubsection[{morph}]{\setlength{\rightskip}{0pt plus 5cm}B\+O\+O\+L morph =F\+A\+L\+S\+E}\label{_lesson25_8c_a783f1b047283439d9b3a91bd5476dbeb}
+
+
+Définition à la ligne 90 du fichier Lesson25.\+c.
+
+\hypertarget{_lesson25_8c_a8d464c1db40a62ae9405cab45f8c6e4e}{}\index{Lesson25.\+c@{Lesson25.\+c}!morph1@{morph1}}
+\index{morph1@{morph1}!Lesson25.\+c@{Lesson25.\+c}}
+\subsubsection[{morph1}]{\setlength{\rightskip}{0pt plus 5cm}{\bf O\+B\+J\+E\+C\+T} morph1}\label{_lesson25_8c_a8d464c1db40a62ae9405cab45f8c6e4e}
+
+
+Définition à la ligne 104 du fichier Lesson25.\+c.
+
+\hypertarget{_lesson25_8c_acd7acfd984dfd4cd7f97b8a2c7c8fce1}{}\index{Lesson25.\+c@{Lesson25.\+c}!morph2@{morph2}}
+\index{morph2@{morph2}!Lesson25.\+c@{Lesson25.\+c}}
+\subsubsection[{morph2}]{\setlength{\rightskip}{0pt plus 5cm}{\bf O\+B\+J\+E\+C\+T} morph2}\label{_lesson25_8c_acd7acfd984dfd4cd7f97b8a2c7c8fce1}
+
+
+Définition à la ligne 104 du fichier Lesson25.\+c.
+
+\hypertarget{_lesson25_8c_a92f0763b0d180d36087f49a5b166b6e1}{}\index{Lesson25.\+c@{Lesson25.\+c}!morph3@{morph3}}
+\index{morph3@{morph3}!Lesson25.\+c@{Lesson25.\+c}}
+\subsubsection[{morph3}]{\setlength{\rightskip}{0pt plus 5cm}{\bf O\+B\+J\+E\+C\+T} morph3}\label{_lesson25_8c_a92f0763b0d180d36087f49a5b166b6e1}
+
+
+Définition à la ligne 104 du fichier Lesson25.\+c.
+
+\hypertarget{_lesson25_8c_afbb9dd7eb1bb58bbcd55b4f6ba0ba0c7}{}\index{Lesson25.\+c@{Lesson25.\+c}!morph4@{morph4}}
+\index{morph4@{morph4}!Lesson25.\+c@{Lesson25.\+c}}
+\subsubsection[{morph4}]{\setlength{\rightskip}{0pt plus 5cm}{\bf O\+B\+J\+E\+C\+T} morph4}\label{_lesson25_8c_afbb9dd7eb1bb58bbcd55b4f6ba0ba0c7}
+
+
+Définition à la ligne 104 du fichier Lesson25.\+c.
+
+\hypertarget{_lesson25_8c_aa9f7a2485f5a17e3c6a83f506dad5523}{}\index{Lesson25.\+c@{Lesson25.\+c}!sour@{sour}}
+\index{sour@{sour}!Lesson25.\+c@{Lesson25.\+c}}
+\subsubsection[{sour}]{\setlength{\rightskip}{0pt plus 5cm}{\bf O\+B\+J\+E\+C\+T} $\ast$ sour}\label{_lesson25_8c_aa9f7a2485f5a17e3c6a83f506dad5523}
+
+
+Définition à la ligne 104 du fichier Lesson25.\+c.
+
+\hypertarget{_lesson25_8c_abc16e65f240ed0c8f3e876e8732c0a33}{}\index{Lesson25.\+c@{Lesson25.\+c}!step@{step}}
+\index{step@{step}!Lesson25.\+c@{Lesson25.\+c}}
+\subsubsection[{step}]{\setlength{\rightskip}{0pt plus 5cm}int step =0}\label{_lesson25_8c_abc16e65f240ed0c8f3e876e8732c0a33}
+
+
+Définition à la ligne 89 du fichier Lesson25.\+c.
+
+\hypertarget{_lesson25_8c_ab4ae7205573977222eadd0795db193e2}{}\index{Lesson25.\+c@{Lesson25.\+c}!steps@{steps}}
+\index{steps@{steps}!Lesson25.\+c@{Lesson25.\+c}}
+\subsubsection[{steps}]{\setlength{\rightskip}{0pt plus 5cm}int steps =200}\label{_lesson25_8c_ab4ae7205573977222eadd0795db193e2}
+
+
+Définition à la ligne 89 du fichier Lesson25.\+c.
+
+\hypertarget{_lesson25_8c_a599f50b1636901ceee9b660ef480a49c}{}\index{Lesson25.\+c@{Lesson25.\+c}!xrot@{xrot}}
+\index{xrot@{xrot}!Lesson25.\+c@{Lesson25.\+c}}
+\subsubsection[{xrot}]{\setlength{\rightskip}{0pt plus 5cm}G\+Lfloat xrot}\label{_lesson25_8c_a599f50b1636901ceee9b660ef480a49c}
+
+
+Définition à la ligne 84 du fichier Lesson25.\+c.
+
+\hypertarget{_lesson25_8c_a0b2f48da4eeb0f800c9e125995e81aed}{}\index{Lesson25.\+c@{Lesson25.\+c}!xspeed@{xspeed}}
+\index{xspeed@{xspeed}!Lesson25.\+c@{Lesson25.\+c}}
+\subsubsection[{xspeed}]{\setlength{\rightskip}{0pt plus 5cm}G\+Lfloat xspeed}\label{_lesson25_8c_a0b2f48da4eeb0f800c9e125995e81aed}
+
+
+Définition à la ligne 84 du fichier Lesson25.\+c.
+
+\hypertarget{_lesson25_8c_a9549138cf4d209303566523d805d8525}{}\index{Lesson25.\+c@{Lesson25.\+c}!yrot@{yrot}}
+\index{yrot@{yrot}!Lesson25.\+c@{Lesson25.\+c}}
+\subsubsection[{yrot}]{\setlength{\rightskip}{0pt plus 5cm}G\+Lfloat yrot}\label{_lesson25_8c_a9549138cf4d209303566523d805d8525}
+
+
+Définition à la ligne 84 du fichier Lesson25.\+c.
+
+\hypertarget{_lesson25_8c_a924f9c7295b7addcb7606fd6e4737d10}{}\index{Lesson25.\+c@{Lesson25.\+c}!yspeed@{yspeed}}
+\index{yspeed@{yspeed}!Lesson25.\+c@{Lesson25.\+c}}
+\subsubsection[{yspeed}]{\setlength{\rightskip}{0pt plus 5cm}G\+Lfloat yspeed}\label{_lesson25_8c_a924f9c7295b7addcb7606fd6e4737d10}
+
+
+Définition à la ligne 84 du fichier Lesson25.\+c.
+
+\hypertarget{_lesson25_8c_a0441705f3a5277b1381159b4a22807c4}{}\index{Lesson25.\+c@{Lesson25.\+c}!zrot@{zrot}}
+\index{zrot@{zrot}!Lesson25.\+c@{Lesson25.\+c}}
+\subsubsection[{zrot}]{\setlength{\rightskip}{0pt plus 5cm}G\+Lfloat zrot}\label{_lesson25_8c_a0441705f3a5277b1381159b4a22807c4}
+
+
+Définition à la ligne 84 du fichier Lesson25.\+c.
+
+\hypertarget{_lesson25_8c_a7f0ef9b41aa8d307eca20b32ceb0a44a}{}\index{Lesson25.\+c@{Lesson25.\+c}!zspeed@{zspeed}}
+\index{zspeed@{zspeed}!Lesson25.\+c@{Lesson25.\+c}}
+\subsubsection[{zspeed}]{\setlength{\rightskip}{0pt plus 5cm}G\+Lfloat zspeed}\label{_lesson25_8c_a7f0ef9b41aa8d307eca20b32ceb0a44a}
+
+
+Définition à la ligne 84 du fichier Lesson25.\+c.
+

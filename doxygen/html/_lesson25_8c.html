@@ -1,0 +1,945 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>Lesson25: Référence du fichier C:/src/OpenGL/Lesson25/Lesson25.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Lesson25
+   &#160;<span id="projectnumber">1.0.1.2</span>
+   </div>
+   <div id="projectbrief">Dessin d&#39;une sphère en mode points que l&#39;on peut faire tourner avec les flêches de déplacement clavier.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.10 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="annotated.html"><span>Structures&#160;de&#160;données</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+      <li><a href="globals.html"><span>Variables&#160;globale</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Structures de données</a> &#124;
+<a href="#func-members">Fonctions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle">
+<div class="title">Référence du fichier C:/src/OpenGL/Lesson25/Lesson25.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Ouvre une fen�tre Windows et dessine une sph�re en mode points que l'on peut faire tourner avec les fl�ches de d�placement clavier.  
+<a href="#details">Plus de détails...</a></p>
+<div class="textblock"><code>#include &lt;windows.h&gt;</code><br />
+<code>#include &lt;math.h&gt;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;gl\gl.h&gt;</code><br />
+<code>#include &lt;gl\glu.h&gt;</code><br />
+</div>
+<p><a href="_lesson25_8c_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Structures de données</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_v_e_r_t_e_x.html">VERTEX</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_o_b_j_e_c_t.html">OBJECT</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:a9135ea2a0d6fce68ba3b858226a31a4f"><td class="memItemLeft" align="right" valign="top">LRESULT CALLBACK&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_lesson25_8c.html#a9135ea2a0d6fce68ba3b858226a31a4f">WndProc</a> (HWND, UINT, WPARAM, LPARAM)</td></tr>
+<tr class="separator:a9135ea2a0d6fce68ba3b858226a31a4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bcd0bf8c9a421707b5776580fc9ff33"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_lesson25_8c.html#a5bcd0bf8c9a421707b5776580fc9ff33">objallocate</a> (<a class="el" href="struct_o_b_j_e_c_t.html">OBJECT</a> *k, int n)</td></tr>
+<tr class="separator:a5bcd0bf8c9a421707b5776580fc9ff33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3cf3ef7d00d8d6e11e659b87145f157"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_lesson25_8c.html#aa3cf3ef7d00d8d6e11e659b87145f157">objfree</a> (<a class="el" href="struct_o_b_j_e_c_t.html">OBJECT</a> *k)</td></tr>
+<tr class="separator:aa3cf3ef7d00d8d6e11e659b87145f157"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48c340edb19bf32b9e9f127178ade2d6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_lesson25_8c.html#a48c340edb19bf32b9e9f127178ade2d6">readstr</a> (FILE *f, char *string)</td></tr>
+<tr class="separator:a48c340edb19bf32b9e9f127178ade2d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1386f14da843b81c65b74c176e632e93"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_lesson25_8c.html#a1386f14da843b81c65b74c176e632e93">objload</a> (char *name, <a class="el" href="struct_o_b_j_e_c_t.html">OBJECT</a> *k)</td></tr>
+<tr class="separator:a1386f14da843b81c65b74c176e632e93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d7462811e0b5be200ed1c7db2ccf9e5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_v_e_r_t_e_x.html">VERTEX</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_lesson25_8c.html#a8d7462811e0b5be200ed1c7db2ccf9e5">calculate</a> (int i)</td></tr>
+<tr class="separator:a8d7462811e0b5be200ed1c7db2ccf9e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87bb84d489df61ed7b0c002584fd984f"><td class="memItemLeft" align="right" valign="top">GLvoid&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_lesson25_8c.html#a87bb84d489df61ed7b0c002584fd984f">ReSizeGLScene</a> (GLsizei width, GLsizei height)</td></tr>
+<tr class="separator:a87bb84d489df61ed7b0c002584fd984f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4c387d3f1ebce6d57684b6a10c9b0ae"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_lesson25_8c.html#aa4c387d3f1ebce6d57684b6a10c9b0ae">InitGL</a> (GLvoid)</td></tr>
+<tr class="separator:aa4c387d3f1ebce6d57684b6a10c9b0ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd0d536ac4234002d2cb9ca4c4b7f0be"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_lesson25_8c.html#afd0d536ac4234002d2cb9ca4c4b7f0be">DrawGLScene</a> (GLvoid)</td></tr>
+<tr class="separator:afd0d536ac4234002d2cb9ca4c4b7f0be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af33a2273205c1491be5916d3091658e0"><td class="memItemLeft" align="right" valign="top">GLvoid&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_lesson25_8c.html#af33a2273205c1491be5916d3091658e0">KillGLWindow</a> (GLvoid)</td></tr>
+<tr class="separator:af33a2273205c1491be5916d3091658e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5f043c9df9b9e5e0e26d567feeeb1bc"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_lesson25_8c.html#ae5f043c9df9b9e5e0e26d567feeeb1bc">CreateGLWindow</a> (char *title, int width, int height, int bits, BOOL fullscreenflag)</td></tr>
+<tr class="separator:ae5f043c9df9b9e5e0e26d567feeeb1bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a661c2abc03926acfaeb93b4ae7db4943"><td class="memItemLeft" align="right" valign="top">int WINAPI&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_lesson25_8c.html#a661c2abc03926acfaeb93b4ae7db4943">WinMain</a> (HINSTANCE <a class="el" href="_lesson25_8c.html#a74029128723095e7bf00a71d46af8b24">hInstance</a>, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)</td></tr>
+<tr class="separator:a661c2abc03926acfaeb93b4ae7db4943"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a78f6446a0e13adc7b7b2f239112ac785"><td class="memItemLeft" align="right" valign="top">HDC&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_lesson25_8c.html#a78f6446a0e13adc7b7b2f239112ac785">hDC</a> =NULL</td></tr>
+<tr class="separator:a78f6446a0e13adc7b7b2f239112ac785"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a874963259c7cd998acfe6e187fbdb4c1"><td class="memItemLeft" align="right" valign="top">HGLRC&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_lesson25_8c.html#a874963259c7cd998acfe6e187fbdb4c1">hRC</a> =NULL</td></tr>
+<tr class="separator:a874963259c7cd998acfe6e187fbdb4c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afec4341c234519e145bac6f0e5edaa51"><td class="memItemLeft" align="right" valign="top">HWND&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_lesson25_8c.html#afec4341c234519e145bac6f0e5edaa51">hWnd</a> =NULL</td></tr>
+<tr class="separator:afec4341c234519e145bac6f0e5edaa51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74029128723095e7bf00a71d46af8b24"><td class="memItemLeft" align="right" valign="top">HINSTANCE&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_lesson25_8c.html#a74029128723095e7bf00a71d46af8b24">hInstance</a></td></tr>
+<tr class="separator:a74029128723095e7bf00a71d46af8b24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55a8351b704275ad12988864918abb2a"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_lesson25_8c.html#a55a8351b704275ad12988864918abb2a">keys</a> [256]</td></tr>
+<tr class="separator:a55a8351b704275ad12988864918abb2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22389371583c4b8843e06da43399d6d9"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_lesson25_8c.html#a22389371583c4b8843e06da43399d6d9">active</a> =TRUE</td></tr>
+<tr class="separator:a22389371583c4b8843e06da43399d6d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab15a33c0173f2c5b6ac806c55cf7f0ba"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_lesson25_8c.html#ab15a33c0173f2c5b6ac806c55cf7f0ba">fullscreen</a> =TRUE</td></tr>
+<tr class="separator:ab15a33c0173f2c5b6ac806c55cf7f0ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a599f50b1636901ceee9b660ef480a49c"><td class="memItemLeft" align="right" valign="top">GLfloat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_lesson25_8c.html#a599f50b1636901ceee9b660ef480a49c">xrot</a></td></tr>
+<tr class="separator:a599f50b1636901ceee9b660ef480a49c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9549138cf4d209303566523d805d8525"><td class="memItemLeft" align="right" valign="top">GLfloat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_lesson25_8c.html#a9549138cf4d209303566523d805d8525">yrot</a></td></tr>
+<tr class="separator:a9549138cf4d209303566523d805d8525"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0441705f3a5277b1381159b4a22807c4"><td class="memItemLeft" align="right" valign="top">GLfloat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_lesson25_8c.html#a0441705f3a5277b1381159b4a22807c4">zrot</a></td></tr>
+<tr class="separator:a0441705f3a5277b1381159b4a22807c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b2f48da4eeb0f800c9e125995e81aed"><td class="memItemLeft" align="right" valign="top">GLfloat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_lesson25_8c.html#a0b2f48da4eeb0f800c9e125995e81aed">xspeed</a></td></tr>
+<tr class="separator:a0b2f48da4eeb0f800c9e125995e81aed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a924f9c7295b7addcb7606fd6e4737d10"><td class="memItemLeft" align="right" valign="top">GLfloat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_lesson25_8c.html#a924f9c7295b7addcb7606fd6e4737d10">yspeed</a></td></tr>
+<tr class="separator:a924f9c7295b7addcb7606fd6e4737d10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f0ef9b41aa8d307eca20b32ceb0a44a"><td class="memItemLeft" align="right" valign="top">GLfloat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_lesson25_8c.html#a7f0ef9b41aa8d307eca20b32ceb0a44a">zspeed</a></td></tr>
+<tr class="separator:a7f0ef9b41aa8d307eca20b32ceb0a44a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc3d5b984f09fca1cbcac3a225c675e6"><td class="memItemLeft" align="right" valign="top">GLfloat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_lesson25_8c.html#adc3d5b984f09fca1cbcac3a225c675e6">cx</a></td></tr>
+<tr class="separator:adc3d5b984f09fca1cbcac3a225c675e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65daf1b9b41e1c9ef990bc6489f2700c"><td class="memItemLeft" align="right" valign="top">GLfloat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_lesson25_8c.html#a65daf1b9b41e1c9ef990bc6489f2700c">cy</a></td></tr>
+<tr class="separator:a65daf1b9b41e1c9ef990bc6489f2700c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adeecafc84badcf5ab77676e4bb549296"><td class="memItemLeft" align="right" valign="top">GLfloat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_lesson25_8c.html#adeecafc84badcf5ab77676e4bb549296">cz</a> =-15</td></tr>
+<tr class="separator:adeecafc84badcf5ab77676e4bb549296"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35af0be900467fedbb610bd6ea65ed78"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_lesson25_8c.html#a35af0be900467fedbb610bd6ea65ed78">key</a> =1</td></tr>
+<tr class="separator:a35af0be900467fedbb610bd6ea65ed78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc16e65f240ed0c8f3e876e8732c0a33"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_lesson25_8c.html#abc16e65f240ed0c8f3e876e8732c0a33">step</a> =0</td></tr>
+<tr class="separator:abc16e65f240ed0c8f3e876e8732c0a33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4ae7205573977222eadd0795db193e2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_lesson25_8c.html#ab4ae7205573977222eadd0795db193e2">steps</a> =200</td></tr>
+<tr class="separator:ab4ae7205573977222eadd0795db193e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a783f1b047283439d9b3a91bd5476dbeb"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_lesson25_8c.html#a783f1b047283439d9b3a91bd5476dbeb">morph</a> =FALSE</td></tr>
+<tr class="separator:a783f1b047283439d9b3a91bd5476dbeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2003332bd352794d46ab71e30bd4c29b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_lesson25_8c.html#a2003332bd352794d46ab71e30bd4c29b">maxver</a></td></tr>
+<tr class="separator:a2003332bd352794d46ab71e30bd4c29b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d464c1db40a62ae9405cab45f8c6e4e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_o_b_j_e_c_t.html">OBJECT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_lesson25_8c.html#a8d464c1db40a62ae9405cab45f8c6e4e">morph1</a></td></tr>
+<tr class="separator:a8d464c1db40a62ae9405cab45f8c6e4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd7acfd984dfd4cd7f97b8a2c7c8fce1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_o_b_j_e_c_t.html">OBJECT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_lesson25_8c.html#acd7acfd984dfd4cd7f97b8a2c7c8fce1">morph2</a></td></tr>
+<tr class="separator:acd7acfd984dfd4cd7f97b8a2c7c8fce1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92f0763b0d180d36087f49a5b166b6e1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_o_b_j_e_c_t.html">OBJECT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_lesson25_8c.html#a92f0763b0d180d36087f49a5b166b6e1">morph3</a></td></tr>
+<tr class="separator:a92f0763b0d180d36087f49a5b166b6e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbb9dd7eb1bb58bbcd55b4f6ba0ba0c7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_o_b_j_e_c_t.html">OBJECT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_lesson25_8c.html#afbb9dd7eb1bb58bbcd55b4f6ba0ba0c7">morph4</a></td></tr>
+<tr class="separator:afbb9dd7eb1bb58bbcd55b4f6ba0ba0c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6609e13574e7f2857733d9b44fc5131"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_o_b_j_e_c_t.html">OBJECT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_lesson25_8c.html#ab6609e13574e7f2857733d9b44fc5131">helper</a></td></tr>
+<tr class="separator:ab6609e13574e7f2857733d9b44fc5131"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9f7a2485f5a17e3c6a83f506dad5523"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_o_b_j_e_c_t.html">OBJECT</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_lesson25_8c.html#aa9f7a2485f5a17e3c6a83f506dad5523">sour</a></td></tr>
+<tr class="separator:aa9f7a2485f5a17e3c6a83f506dad5523"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a367540b9046af35b3c3f66c4a417c2ed"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_o_b_j_e_c_t.html">OBJECT</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_lesson25_8c.html#a367540b9046af35b3c3f66c4a417c2ed">dest</a></td></tr>
+<tr class="separator:a367540b9046af35b3c3f66c4a417c2ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Ouvre une fen�tre Windows et dessine une sph�re en mode points que l'on peut faire tourner avec les fl�ches de d�placement clavier. </p>
+<p>Comments manageable by Doxygen</p>
+<p>Modified smoothly by Thierry DECHAIZE</p>
+<p>Paradigm : obtain one source (only one !) compatible for multiple free C Compilers and provide for all users an development environment on Windows (64 bits compatible), the great Code::Blocks manager (version 13.12), and don't use glaux.lib or glaux.dll.</p>
+<p>a) Mingw 32 and 64 bits : downloadable <a href="http://sourceforge.net/projects/mingw/">http://sourceforge.net/projects/mingw/</a> b) Mingw 32 DEV-CPP : included in old Dev-Cpp <a href="http://sourceforge.net/projects/devcpp/">http://sourceforge.net/projects/devcpp/</a> c) Mingw 32 CB : included in package Code::Blocks (version 13.12) <a href="http://sourceforge.net/projects/codeblocks/files/Binaries/12.11/Windows/">http://sourceforge.net/projects/codeblocks/files/Binaries/12.11/Windows/</a> d) Borland C : downloadable <a href="http://edn.embarcadero.com/article/20633">http://edn.embarcadero.com/article/20633</a> e) Digital Mars Compiler C : version 8.57 downloadable <a href="http://www.digitalmars.com">http://www.digitalmars.com</a> f) OpenWatcom : version 1.9 downloadable <a href="http://openwatcom.mirror.fr/">http://openwatcom.mirror.fr/</a> Version 2.0 64bits seems very buggy !!! g) Lcc and Lcc64 : downloadable <a href="http://www.cs.virginia.edu/~lcc-win32/">http://www.cs.virginia.edu/~lcc-win32/</a> h) Cygwin : downloadable <a href="http://www.cygwin.com/install.html">http://www.cygwin.com/install.html</a> (setup.exe) i) Visual Studio 2005 + 64bits: express edition for free (my version 2005 is full not express) <a href="http://www.microsoft.com/france/visual-studio/essayez/express.aspx">http://www.microsoft.com/france/visual-studio/essayez/express.aspx</a> j) TDM GCC 64 bits : downloadable on <a href="http://sourceforge.net/projects/TDM-GCC">http://sourceforge.net/projects/TDM-GCC</a></p>
+<p>Important remark : All install in C partition, "no space" and "no special characters" in the name of directories (it's reason to not install in C: Files (x86) ... by default proposed on windows 64 bits)</p>
+<p>Add resource file end resource header for restitute version + icon OpenGL.ico for fun because versionning is important, same for freeware :-) !</p>
+<p>Date : 2016/01/02</p>
+<dl class="section author"><dt>Auteur</dt><dd>Piotr Cieslak &amp; Jeff Molofee (NeHe) originely, Modified for LCCWin32 compiler by Robert Wishlaw 2002/11/24 </dd>
+<dd>
+After adapted by Thierry Dechaize to verify paradigm : one source for multiple C Compilers </dd></dl>
+<dl class="section version"><dt>Version</dt><dd>1.0.1.2 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>3 janvier 2016</dd></dl>
+<p>Ce programme ne g�re que trois �v�nements : le clic sur le bouton "Ferm�" de la fen�tre, la sortie par la touche ESC et les fl�ches de d�placement clavier. </p>
+
+<p>Définition dans le fichier <a class="el" href="_lesson25_8c_source.html">Lesson25.c</a>.</p>
+</div><h2 class="groupheader">Documentation des fonctions</h2>
+<a class="anchor" id="a8d7462811e0b5be200ed1c7db2ccf9e5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_v_e_r_t_e_x.html">VERTEX</a> calculate </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="_lesson25_8c_source.html#l00178">178</a> du fichier <a class="el" href="_lesson25_8c_source.html">Lesson25.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae5f043c9df9b9e5e0e26d567feeeb1bc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOOL CreateGLWindow </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>title</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>height</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>bits</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">BOOL&#160;</td>
+          <td class="paramname"><em>fullscreenflag</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>This Code Creates Our OpenGL Window. Parameters Are: * title - Title To Appear At The Top Of The Window * width - Width Of The GL Window Or Fullscreen Mode * height - Height Of The GL Window Or Fullscreen Mode * bits - Number Of Bits To Use For Color (8/16/24/32) * fullscreenflag - Use Fullscreen Mode (TRUE) Or Windowed Mode (FALSE) </p>
+
+<p>Définition à la ligne <a class="el" href="_lesson25_8c_source.html#l00333">333</a> du fichier <a class="el" href="_lesson25_8c_source.html">Lesson25.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="afd0d536ac4234002d2cb9ca4c4b7f0be"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DrawGLScene </td>
+          <td>(</td>
+          <td class="paramtype">GLvoid&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="_lesson25_8c_source.html#l00237">237</a> du fichier <a class="el" href="_lesson25_8c_source.html">Lesson25.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa4c387d3f1ebce6d57684b6a10c9b0ae"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int InitGL </td>
+          <td>(</td>
+          <td class="paramtype">GLvoid&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="_lesson25_8c_source.html#l00206">206</a> du fichier <a class="el" href="_lesson25_8c_source.html">Lesson25.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af33a2273205c1491be5916d3091658e0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid KillGLWindow </td>
+          <td>(</td>
+          <td class="paramtype">GLvoid&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="_lesson25_8c_source.html#l00279">279</a> du fichier <a class="el" href="_lesson25_8c_source.html">Lesson25.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5bcd0bf8c9a421707b5776580fc9ff33"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void objallocate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_o_b_j_e_c_t.html">OBJECT</a> *&#160;</td>
+          <td class="paramname"><em>k</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="_lesson25_8c_source.html#l00131">131</a> du fichier <a class="el" href="_lesson25_8c_source.html">Lesson25.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa3cf3ef7d00d8d6e11e659b87145f157"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void objfree </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_o_b_j_e_c_t.html">OBJECT</a> *&#160;</td>
+          <td class="paramname"><em>k</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="_lesson25_8c_source.html#l00136">136</a> du fichier <a class="el" href="_lesson25_8c_source.html">Lesson25.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1386f14da843b81c65b74c176e632e93"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void objload </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_o_b_j_e_c_t.html">OBJECT</a> *&#160;</td>
+          <td class="paramname"><em>k</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="_lesson25_8c_source.html#l00150">150</a> du fichier <a class="el" href="_lesson25_8c_source.html">Lesson25.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a48c340edb19bf32b9e9f127178ade2d6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void readstr </td>
+          <td>(</td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>string</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="_lesson25_8c_source.html#l00141">141</a> du fichier <a class="el" href="_lesson25_8c_source.html">Lesson25.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a87bb84d489df61ed7b0c002584fd984f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid ReSizeGLScene </td>
+          <td>(</td>
+          <td class="paramtype">GLsizei&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLsizei&#160;</td>
+          <td class="paramname"><em>height</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="_lesson25_8c_source.html#l00187">187</a> du fichier <a class="el" href="_lesson25_8c_source.html">Lesson25.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a661c2abc03926acfaeb93b4ae7db4943"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int WINAPI WinMain </td>
+          <td>(</td>
+          <td class="paramtype">HINSTANCE&#160;</td>
+          <td class="paramname"><em>hInstance</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">HINSTANCE&#160;</td>
+          <td class="paramname"><em>hPrevInstance</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LPSTR&#160;</td>
+          <td class="paramname"><em>lpCmdLine</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nCmdShow</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="_lesson25_8c_source.html#l00539">539</a> du fichier <a class="el" href="_lesson25_8c_source.html">Lesson25.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9135ea2a0d6fce68ba3b858226a31a4f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">LRESULT CALLBACK WndProc </td>
+          <td>(</td>
+          <td class="paramtype">HWND&#160;</td>
+          <td class="paramname"><em>hWnd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UINT&#160;</td>
+          <td class="paramname"><em>uMsg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">WPARAM&#160;</td>
+          <td class="paramname"><em>wParam</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LPARAM&#160;</td>
+          <td class="paramname"><em>lParam</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="_lesson25_8c_source.html#l00478">478</a> du fichier <a class="el" href="_lesson25_8c_source.html">Lesson25.c</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des variables</h2>
+<a class="anchor" id="a22389371583c4b8843e06da43399d6d9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOOL active =TRUE</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="_lesson25_8c_source.html#l00081">81</a> du fichier <a class="el" href="_lesson25_8c_source.html">Lesson25.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="adc3d5b984f09fca1cbcac3a225c675e6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLfloat cx</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="_lesson25_8c_source.html#l00084">84</a> du fichier <a class="el" href="_lesson25_8c_source.html">Lesson25.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a65daf1b9b41e1c9ef990bc6489f2700c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLfloat cy</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="_lesson25_8c_source.html#l00084">84</a> du fichier <a class="el" href="_lesson25_8c_source.html">Lesson25.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="adeecafc84badcf5ab77676e4bb549296"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLfloat cz =-15</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="_lesson25_8c_source.html#l00086">86</a> du fichier <a class="el" href="_lesson25_8c_source.html">Lesson25.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a367540b9046af35b3c3f66c4a417c2ed"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_o_b_j_e_c_t.html">OBJECT</a> * dest</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="_lesson25_8c_source.html#l00104">104</a> du fichier <a class="el" href="_lesson25_8c_source.html">Lesson25.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab15a33c0173f2c5b6ac806c55cf7f0ba"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOOL fullscreen =TRUE</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="_lesson25_8c_source.html#l00082">82</a> du fichier <a class="el" href="_lesson25_8c_source.html">Lesson25.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a78f6446a0e13adc7b7b2f239112ac785"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">HDC hDC =NULL</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="_lesson25_8c_source.html#l00075">75</a> du fichier <a class="el" href="_lesson25_8c_source.html">Lesson25.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab6609e13574e7f2857733d9b44fc5131"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_o_b_j_e_c_t.html">OBJECT</a> helper</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="_lesson25_8c_source.html#l00104">104</a> du fichier <a class="el" href="_lesson25_8c_source.html">Lesson25.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a74029128723095e7bf00a71d46af8b24"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">HINSTANCE hInstance</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="_lesson25_8c_source.html#l00078">78</a> du fichier <a class="el" href="_lesson25_8c_source.html">Lesson25.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a874963259c7cd998acfe6e187fbdb4c1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">HGLRC hRC =NULL</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="_lesson25_8c_source.html#l00076">76</a> du fichier <a class="el" href="_lesson25_8c_source.html">Lesson25.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="afec4341c234519e145bac6f0e5edaa51"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">HWND hWnd =NULL</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="_lesson25_8c_source.html#l00077">77</a> du fichier <a class="el" href="_lesson25_8c_source.html">Lesson25.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a35af0be900467fedbb610bd6ea65ed78"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int key =1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="_lesson25_8c_source.html#l00088">88</a> du fichier <a class="el" href="_lesson25_8c_source.html">Lesson25.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a55a8351b704275ad12988864918abb2a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOOL keys[256]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="_lesson25_8c_source.html#l00080">80</a> du fichier <a class="el" href="_lesson25_8c_source.html">Lesson25.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2003332bd352794d46ab71e30bd4c29b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int maxver</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="_lesson25_8c_source.html#l00103">103</a> du fichier <a class="el" href="_lesson25_8c_source.html">Lesson25.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a783f1b047283439d9b3a91bd5476dbeb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOOL morph =FALSE</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="_lesson25_8c_source.html#l00090">90</a> du fichier <a class="el" href="_lesson25_8c_source.html">Lesson25.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8d464c1db40a62ae9405cab45f8c6e4e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_o_b_j_e_c_t.html">OBJECT</a> morph1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="_lesson25_8c_source.html#l00104">104</a> du fichier <a class="el" href="_lesson25_8c_source.html">Lesson25.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="acd7acfd984dfd4cd7f97b8a2c7c8fce1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_o_b_j_e_c_t.html">OBJECT</a> morph2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="_lesson25_8c_source.html#l00104">104</a> du fichier <a class="el" href="_lesson25_8c_source.html">Lesson25.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a92f0763b0d180d36087f49a5b166b6e1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_o_b_j_e_c_t.html">OBJECT</a> morph3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="_lesson25_8c_source.html#l00104">104</a> du fichier <a class="el" href="_lesson25_8c_source.html">Lesson25.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="afbb9dd7eb1bb58bbcd55b4f6ba0ba0c7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_o_b_j_e_c_t.html">OBJECT</a> morph4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="_lesson25_8c_source.html#l00104">104</a> du fichier <a class="el" href="_lesson25_8c_source.html">Lesson25.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa9f7a2485f5a17e3c6a83f506dad5523"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_o_b_j_e_c_t.html">OBJECT</a> * sour</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="_lesson25_8c_source.html#l00104">104</a> du fichier <a class="el" href="_lesson25_8c_source.html">Lesson25.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="abc16e65f240ed0c8f3e876e8732c0a33"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int step =0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="_lesson25_8c_source.html#l00089">89</a> du fichier <a class="el" href="_lesson25_8c_source.html">Lesson25.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab4ae7205573977222eadd0795db193e2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int steps =200</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="_lesson25_8c_source.html#l00089">89</a> du fichier <a class="el" href="_lesson25_8c_source.html">Lesson25.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a599f50b1636901ceee9b660ef480a49c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLfloat xrot</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="_lesson25_8c_source.html#l00084">84</a> du fichier <a class="el" href="_lesson25_8c_source.html">Lesson25.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0b2f48da4eeb0f800c9e125995e81aed"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLfloat xspeed</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="_lesson25_8c_source.html#l00084">84</a> du fichier <a class="el" href="_lesson25_8c_source.html">Lesson25.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9549138cf4d209303566523d805d8525"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLfloat yrot</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="_lesson25_8c_source.html#l00084">84</a> du fichier <a class="el" href="_lesson25_8c_source.html">Lesson25.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a924f9c7295b7addcb7606fd6e4737d10"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLfloat yspeed</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="_lesson25_8c_source.html#l00084">84</a> du fichier <a class="el" href="_lesson25_8c_source.html">Lesson25.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0441705f3a5277b1381159b4a22807c4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLfloat zrot</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="_lesson25_8c_source.html#l00084">84</a> du fichier <a class="el" href="_lesson25_8c_source.html">Lesson25.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7f0ef9b41aa8d307eca20b32ceb0a44a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLfloat zspeed</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="_lesson25_8c_source.html#l00084">84</a> du fichier <a class="el" href="_lesson25_8c_source.html">Lesson25.c</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.10
+</small></address>
+</body>
+</html>
